@@ -11,7 +11,7 @@ A customizable WebAssembly retro virtual console for web and web-compatible plat
   This is done by changing specific "settings" memory registers upon startup.
 - **Zero-backend multiplayer:** netplay directly to peers by texting a link to your game that includes peer-to-peer connection details.
   No matchmaking / signaling server, just your frontend website texted via a link.
-- **Minimal and portable:** AWSM is just a single `.html` file, along with this README for documentation. Building your game involves compiling a `.wasm` game with your language of choice, base64-string-encoding that `.wasm`, then performing a string substitution to insert your cartridge-string into the `.html` file. See [Making a game](#create-and-run-an-awsm-game).
+- **Minimal and portable:** AWSM is just a single `.html` file that is just missing your game `.wasm` encoded as a string. So, building your game involves compiling a `.wasm` game with your language of choice, base64-string-encoding that `.wasm`, then performing a string substitution to insert your cartridge-string into the `.html` file. See [Making a game](#create-and-run-an-awsm-game).
 
 ## Roadmap
 - Complete the spec of the platform.
