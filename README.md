@@ -1,6 +1,6 @@
 # AWSM
 
-> AWSM is work-in-progress and the minimum working prototype doesn't exist yet. Feel free to PR ideas, and/or come back later!
+> The minimum working prototype of AWSM doesn't exist yet. Feel free to PR ideas, and/or come back later!
 
 A customizable WASM retro virtual console for the web and web-compatible platforms.
 
