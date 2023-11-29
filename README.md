@@ -5,13 +5,13 @@
 A customizable WASM retro virtual console for the web and web-compatible platforms.
 
 ## What is AWSM?
-- **Batteries-Included Game Console:** As a pseudo-fork of [Wasm-4](https://github.com/aduros/wasm4),
+- **Batteries-included game console:** As a pseudo-fork of [Wasm-4](https://github.com/aduros/wasm4),
   AWSM gives you built-in local and netplay multiplayer, controls, audio, & screen, all with near-0 code glue.
 - **Customizable:** use code in your game cartridge to set screen width/height in pixels (and optionally expanding a dimension to cover the full screen), on-screen controls, color range, audio channels, and more.
   This is done by changing specific "settings" memory registers upon startup.
-- **zero-backend multiplayer:** netplay directly to peers by texting a link to your game that includes peer-to-peer connection details.
+- **Zero-backend multiplayer:** netplay directly to peers by texting a link to your game that includes peer-to-peer connection details.
   No matchmaking / signaling server, just your frontend website texted via a link.
-- **Minimal and Portable:** AWSM is just a single `.html` file. Building your game involves compiling a `.wasm` game with your language of choice that uses , base64-encoding that `.wasm`, then performing a string substitution to insert your cartridge into the `.html` file. See [Make a game](make-a-game).
+- **Minimal and portable:** AWSM is just a single `.html` file. Building your game involves compiling a `.wasm` game with your language of choice that uses , base64-encoding that `.wasm`, then performing a string substitution to insert your cartridge into the `.html` file. See [Make a game](make-a-game).
 
 ## Roadmap
 - Complete the spec of the platform.
