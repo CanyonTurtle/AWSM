@@ -28,7 +28,8 @@ A customizable WASM retro virtual console for the web and web-compatible platfor
 2. Create a `.wasm` binary that has the correct memory layout (???) and uses AWSM functions (???) to create your game.
 3. Run the following commands to build the game into an html file
    ```bash
-   wget https://canyonturtle.github.io/awsm > game.html
-   sed game.html # (... substitute "WASM_CART_SNIP" with the output of base64 of the wasm file.)
+   wget https://canyonturtle.github.io/awsm \
+       | sed game.html # (... substitute "WASM_CART_SNIP" with the output of base64 of the wasm file.) \
+       > game.html
    ```
 4. Open `game.html` and play your game!
