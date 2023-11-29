@@ -15,10 +15,10 @@ A customizable WebAssembly-based retro virtual console for the web and web-compa
 
 ## Roadmap
 - Complete the spec of the platform.
-- Create an example of deployment using (this example)[https://stackoverflow.com/a/52582865/10107580].
+- Create an example of deployment using [this example](https://stackoverflow.com/a/52582865/10107580).
 - Create a minimum working prototype.
-    1. Demake Wasm-4 screen renderer (with needed licence attribution) and make renderer compatible with larger pixel dimensions (i.e. circumvent UInt32Array max lengths).
-    2. Create serverless netplay via (this idea)[https://stackoverflow.com/a/29056385/10107580]
+    1. Demake Wasm-4 screen renderer, with needed licence attribution, and make renderer compatible with larger pixel dimensions (i.e. circumvent UInt32Array max lengths).
+    2. Create serverless netplay via [this idea](https://stackoverflow.com/a/29056385/10107580)
     3. Demake Wasm-4 webassembly graphics FFI, start/update, etc...
     4. Demake Wasm-4 APU
 - Create a Discord server.
