@@ -13,4 +13,5 @@ A customizable WebAssembly virtual console. This is an API-breaking fork of [Was
   
 ## Roadmap
 - Complete the spec of the platform.
+- Add `configure()` function. 
 - Parameterize all code templates and the runtimes by the new settings.

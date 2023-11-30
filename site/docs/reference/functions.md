@@ -159,7 +159,21 @@ Returns the number of bytes written, which may be less than `size`.
 
 ## Callbacks
 
+
 Callback functions are called by WASM-4 and may be implemented by your game.
+
+
+### `configure ()`
+
+Called before anything else. Allows your game to change the console specs (screen width/height, # colors, etc...) by setting the following memory registers:
+1. `0x00` - 2 bytes - new width of your game. If zero, defaults to 160. Otherwise, whatever size you specify. Must be between 40 - 600 (or else error occurs). Use a 16-bit unsigned integer to set this value.
+2. `0x02` - 2 bytes - new height of your game. If zero, defaults to 160. Otherwise, must be between 40 - 600 (or else error occurs). Use a 16-bit unsigned integer to set this value.
+3. `0x04` - 1 byte  - if 0, screen aspect is fixed. Otherwise, screen can add pixels to unfilled screen space to remove any blank space. This works by keeping the dimension that already spans the screen the same, and adding pixels to the other dimension. Note that if the screen is ill-conditioned (e.g. 600 by 200 on a vertical phone), screen expansion will likely cause an error for adding too many pixels. To fix this, use a lower resolution, force horizontal/vertical mode (see below), or don't allow screen expansion.
+4. `0x05` - 1 byte  - If 1, force horizontal. If 2, force vertical. Otherwise, screen can switch between both.
+5. `0x06` - 1 byte  - touchscreen control type. if 1, hide the touchscreen (useful for making your own touchscreen). if 2-100, use a transparent touchscreen with this amount of opacity. Otherwise, use default Wasm-4 touchscreen.
+6. `0x07` - 1 byte  - color scheme. If 0, default 4-color indexed pallete. if 1, 16-color (4bpp). if 2, 256-color (8bpp). if 3, 4-byte RGBA (32bpp).
+7. `0x08` - 1 byte  - sound mode. If 0, default Wasm-4 sound style. Otherwise, use new sound engine (???).
+
 
 ### `start ()`
 
