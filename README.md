@@ -1,36 +1,16 @@
 # AWSM
 
-A customizable WebAssembly virtual console. API-breaking fork of [Wasm-4](https://github.com/aduros/wasm4)
+A customizable WebAssembly virtual console. This is an API-breaking fork of [Wasm-4](https://github.com/aduros/wasm4), although running existing Wasm-4 games is also a goal.
 
 > The minimum working prototype of AWSM doesn't exist yet. Feel free to PR ideas, and/or come back later!
 
 ## What is AWSM?
-- **Batteries-included game console:** As a pseudo-fork of [Wasm-4](https://github.com/aduros/wasm4),
-  AWSM gives you built-in local and netplay multiplayer, controls, audio, & screen, all with near-0 code glue.
+- **Batteries-included game console:** As a fork of [Wasm-4](https://github.com/aduros/wasm4),
+  AWSM gives you built-in local and netplay multiplayer, controls, audio, & screen, all with 0 code glue.
 - **Customizable:** use code in your game cartridge to set screen width/height in pixels (and optionally expanding a dimension to cover the full screen), on-screen controls, color range, audio channels, and more.
   This is done by changing specific "settings" memory registers upon startup.
-- **Zero-backend multiplayer:** netplay directly to peers by texting a link to your game that includes peer-to-peer connection details.
-  No matchmaking / signaling server, just your frontend website texted via a link.
-- **Minimalist & portable:** AWSM is just a single `.html` file that is just missing your game `.wasm` encoded as a string. See [Making a game](#create-and-run-an-awsm-game). The documentation for AWSM is this README.
-- **Commercializable:** AWSM's [license](./LICENSE) is suitable for commercial games. The minimalism of the platform makes it easy to tweak/deploy (e.g. add matchmaking, specific controller support, deploy via [electron](https://stackoverflow.com/a/38620323/10107580), etc...)
+- **Commercializable:** AWSM's [license](./LICENSE) is suitable for commercial games (as is Wasm-4's).
   
 ## Roadmap
 - Complete the spec of the platform.
-- Create an example of deployment using [this example](https://stackoverflow.com/a/52582865/10107580).
-- Create a minimum working prototype.
-    1. Demake Wasm-4 screen renderer, with needed licence attribution, and make renderer compatible with larger pixel dimensions (i.e. circumvent UInt32Array max lengths).
-    2. Create serverless netplay via [this idea](https://stackoverflow.com/a/29056385/10107580)
-    3. Demake Wasm-4 webassembly graphics FFI, start/update, etc...
-    4. Demake Wasm-4 APU
-- Create a Discord server.
-
-## Create and run an AWSM game
-1. Choose a programming language that compiles to `.wasm`, e.g. Rust with the `wasm32-unknown-unknown` target.
-2. Create a `.wasm` binary that has the correct memory layout (???) and uses AWSM functions (???) to create your game.
-3. Run the following commands to build the game into an html file
-   ```bash
-   wget https://canyonturtle.github.io/awsm \
-       | sed game.html # (... substitute "WASM_CART_SNIP" with the output of base64 of the wasm file.) \
-       > game.html
-   ```
-4. Open `game.html` and play your game!
+- Parameterize all code templates and the runtimes by the new settings.
