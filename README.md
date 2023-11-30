@@ -2,8 +2,6 @@
 
 > The minimum working prototype of AWSM doesn't exist yet. Feel free to PR ideas, and/or come back later!
 
-A customizable WebAssembly retro virtual console for web and web-compatible platforms. Inspired by Wasm-4.
-
 ## What is AWSM?
 - **Batteries-included game console:** As a pseudo-fork of [Wasm-4](https://github.com/aduros/wasm4),
   AWSM gives you built-in local and netplay multiplayer, controls, audio, & screen, all with near-0 code glue.
