@@ -1,5 +1,7 @@
 # AWSM
 
+A customizable WebAssembly virtual console. API-breaking fork of [Wasm-4](https://github.com/aduros/wasm4)
+
 > The minimum working prototype of AWSM doesn't exist yet. Feel free to PR ideas, and/or come back later!
 
 ## What is AWSM?
